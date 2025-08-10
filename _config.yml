@@ -96,7 +96,7 @@ comments:
     reactions_enabled:
 
 # Custom CSS asset file path (relative to /assets/css/)
-assets: /assets/css/custom.css
+assets: /assets/css/main.scss
 
 # Self-hosted static assets options (advanced)
 self_host:
