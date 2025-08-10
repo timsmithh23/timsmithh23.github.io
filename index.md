@@ -17,4 +17,6 @@ This project is designed to help me get hands-on with networking concepts by bui
   *Purpose:* Provides VLAN segmentation and network connectivity between devices in the lab.  
 
 - **Router:** T-Mobile 5G Home Internet Gateway  
-  *Purpose:* Connects the lab to the internet and provides WAN access for VMs and services.  
+  *Purpose:* Connects the lab to the internet and provides WAN access for VMs and services.
+
+  hihi
