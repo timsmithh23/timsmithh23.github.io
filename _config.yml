@@ -28,10 +28,10 @@ url: "https://www.timsmithh23.github.io"
 github:
   username: timsmithh23 # change to your GitHub username
 
-twitter:
-  username: twitter_username # change to your Twitter username
+#twitter:
+#  username: twitter_username # change to your Twitter username
 
-social:
+social: Tim Smith
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Tim Smith
@@ -130,7 +130,9 @@ comments:
     reactions_enabled: # optional, default to the value of `1`
 
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
-assets:
+assetsL
+  - assets/css/custom.css
+
   self_host:
     enabled: # boolean, keep empty means false
     # specify the Jekyll environment, empty means both
