@@ -65,10 +65,10 @@ pageviews:
 theme_mode:
 
 # CDN URL for media resources, e.g. avatar or images (optional)
-cdn:
+cdn: 
 
 # Sidebar avatar image URL or local path (optional)
-avatar:
+avatar: /assets/pictures/robopfp.png
 
 # Social preview image URL (for SEO OpenGraph, optional)
 social_preview_image:
