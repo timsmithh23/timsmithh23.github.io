@@ -51,3 +51,5 @@ iface vmbr1 inet static
     bridge_ports none
     bridge_stp off
     bridge_fd 0
+```
+
