@@ -130,8 +130,7 @@ comments:
     reactions_enabled: # optional, default to the value of `1`
 
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
-assets:
-  - assets/css/custom.css
+assets: /assets/css/custom.css
 
   self_host:
     enabled: # boolean, keep empty means false
