@@ -187,7 +187,7 @@ jekyll-archives:
   enabled: [categories, tags]
   layouts:
     category: category
-    tag: tag
+    tag: blog   # change this from 'tag' to 'blog'
   permalinks:
-    tag: /tags/:name/
+    tag: /blogs/:name/   # change URL path from /tags/ to /blogs/
     category: /categories/:name/
