@@ -11,3 +11,7 @@ pre code {
   border-radius: 8px;
   overflow-x: auto;
 }
+
+body {
+  background-color: hotpink !important;
+}
