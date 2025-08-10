@@ -12,5 +12,5 @@ I'll share my configs, diagrams, and lessons learned so I can track my progress 
 **Who am I?**  
 I'm Tim Smith, a CIS major at Kutztown University experimenting with networking, virtualization, and automation in my free time.  
 
-[📄 View My Resume](/assets/files/tim_resume.pdf)
+[image alt](https://github.com/timsmithh23/timsmithh23.github.io/blob/f1fbf4938efc68fba21572ca7b2f4affda144827/assets/files/tim_resume.pdf)
 
