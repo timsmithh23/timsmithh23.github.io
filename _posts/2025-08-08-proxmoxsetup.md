@@ -30,7 +30,6 @@ Proxmox uses Linux Bridges (like virtual switches) to connect VMs to the physica
 
 ## Key Config Snippet (`/etc/network/interfaces`)
 
-```
 auto lo
 iface lo inet loopback
 
@@ -50,5 +49,3 @@ iface vmbr1 inet static
     bridge_ports none
     bridge_stp off
     bridge_fd 0
-```
-
