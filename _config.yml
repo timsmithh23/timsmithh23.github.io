@@ -7,3 +7,14 @@ url: "https://timsmithh23.github.io"
 
 aux_links:
   My LinkedIn: [https://www.linkedin.com/in/tim-smithh23/]
+
+# Remove default Just the Docs footer text
+footer_content: ""
+
+# Hide posts from the sidebar/nav by default
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      nav_exclude: true

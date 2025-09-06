@@ -1,9 +1,9 @@
 ---
 title: "VLAN Segmentation and Routing"
 layout: default
-nav_order: 1
+date: 2025-08-06
 ---
-**Date:** 2025-09-06
+**Date:** 2025-08-06
 
 # VLAN Segmentation and Routing
 

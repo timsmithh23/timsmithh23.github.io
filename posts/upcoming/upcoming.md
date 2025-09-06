@@ -2,7 +2,7 @@
 title: Upcoming
 layout: default
 has_children: true
-nav_order: 99
+nav_order: 4
 ---
 
 # Upcoming <span class="label label-yellow">Roadmap</span>

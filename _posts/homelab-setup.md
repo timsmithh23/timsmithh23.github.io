@@ -2,7 +2,6 @@
 title: Homelab Setup
 layout: default
 description: How I configured Proxmox networking for my mini enterprise lab
-nav_order: 2
 ---
 
 # Configuring Proxmox Networking for My Homelab
