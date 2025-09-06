@@ -5,5 +5,5 @@ remote_theme: just-the-docs/just-the-docs
 
 url: "https://timsmithh23.github.io"
 
-## aux_links:
-  ## [INsert name]: [link]]
+aux_links:
+  My LinkedIn: [https://www.linkedin.com/in/timsmithh23/]
