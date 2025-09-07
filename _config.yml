@@ -1,4 +1,4 @@
-title: Tims Homelabs
+title: "Tim's Homelab Projects"
 description: My journey with homelab projects to develop my I.T. skills!
 theme: just-the-docs
 remote_theme: just-the-docs/just-the-docs
@@ -18,3 +18,9 @@ defaults:
       type: "posts"
     values:
       nav_exclude: true
+
+just_the_docs:
+  custom_css:
+    - "assets/css/custom.css"
+  color_scheme_toggle: true
+  color_scheme_default: auto

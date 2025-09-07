@@ -1,0 +1,12 @@
+<script>
+// Load saved or default color scheme early to avoid flash
+(function(){
+  var mode = localStorage.getItem('jtd-color-scheme') || 'auto';
+  var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var theme = mode === 'auto' ? (prefersDark ? 'dark' : 'light') : mode;
+  var link = document.querySelector('link[rel="stylesheet"][href^="/assets/css/just-the-docs-"]');
+  if (link) {
+    link.href = '/assets/css/just-the-docs-' + theme + '.css';
+  }
+})();
+</script>

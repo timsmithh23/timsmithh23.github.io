@@ -30,7 +30,7 @@ Each VLAN would have its own subnet, making it easier to control traffic.
 
 ### Step 2: Configure the Layer 3 Switch
 
-- Logged into my Layer 3 switch via console.
+- Logged into my Layer 3 switch via a PuTTy SSH console.
 - Created VLANs:
 
 ```text

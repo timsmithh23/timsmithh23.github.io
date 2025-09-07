@@ -1,0 +1,79 @@
+<div class="theme-toggle" role="group" aria-label="Color scheme">
+  <label for="theme-switch" class="theme-label">Theme</label>
+  <button id="theme-switch" class="theme-switch" aria-label="Toggle dark mode" type="button">
+    <span class="theme-switch-track">
+      <span class="theme-switch-thumb">
+        <span class="theme-switch-emoji" id="theme-switch-emoji" aria-hidden="true">☀️</span>
+      </span>
+    </span>
+  </button>
+  <span class="theme-note sr-only">Toggle between light and dark mode</span>
+  <script>
+    (() => {
+      const STORAGE_KEY = 'jtd-color-scheme';
+      function setEmoji(mode) {
+        const emoji = document.getElementById('theme-switch-emoji');
+        if (emoji) emoji.textContent = mode === 'dark' ? '🌙' : '☀️';
+      }
+      function applyTheme(mode) {
+        if (window.jtd && jtd.setTheme) jtd.setTheme(mode);
+        if (document && document.documentElement) {
+          document.documentElement.setAttribute('data-theme', mode);
+          document.documentElement.setAttribute('data-theme-mode', mode);
+        }
+        const btn = document.getElementById('theme-switch');
+        if (btn) btn.setAttribute('aria-pressed', mode === 'dark');
+        setEmoji(mode);
+      }
+      function toggleTheme() {
+        const current = (document.documentElement.getAttribute('data-theme') || 'light');
+        const next = current === 'dark' ? 'light' : 'dark';
+        localStorage.setItem(STORAGE_KEY, next);
+        applyTheme(next);
+      }
+      document.addEventListener('DOMContentLoaded', () => {
+        let saved = localStorage.getItem(STORAGE_KEY);
+        if (saved !== 'light' && saved !== 'dark') saved = 'light';
+        applyTheme(saved);
+        const btn = document.getElementById('theme-switch');
+        if (btn) btn.addEventListener('click', toggleTheme);
+      });
+    })();
+  </script>
+  <style>
+    .theme-toggle { display: inline-flex; gap: .5rem; align-items: center; margin-left: .5rem; }
+    .theme-label { font-size: .875rem; color: inherit; }
+    .theme-switch {
+      background: none; border: none; padding: 0; margin: 0 0.2em; cursor: pointer;
+      display: inline-flex; align-items: center; position: relative;
+      height: 1.6em; width: 3.2em;
+    }
+    .theme-switch-track {
+      width: 2.6em; height: 1.2em; background: #e5e7eb; border-radius: 1em;
+      display: inline-block; position: relative; transition: background 0.2s;
+    }
+    .theme-switch-thumb {
+      position: absolute; left: 0.1em; top: 0.1em;
+      width: 1em; height: 1em; border-radius: 50%; background: #fff; box-shadow: 0 1px 4px #0002;
+      transition: left 0.2s, background 0.2s;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1em;
+    }
+    .theme-switch-emoji {
+      display: block;
+      transition: color 0.2s;
+    }
+    .theme-switch[aria-pressed="true"] .theme-switch-thumb {
+      left: 1.5em; background: #222;
+    }
+    .theme-switch[aria-pressed="true"] .theme-switch-track {
+      background: #334155;
+    }
+    .theme-switch[aria-pressed="true"] .theme-switch-emoji {
+      color: #ffe066;
+    }
+    html[data-theme="dark"] .theme-label { color: #fff; }
+  .theme-switch:focus-visible { outline: 2px solid #6ea8fe; outline-offset: 2px; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+  </style>
+</div>

@@ -1,0 +1,107 @@
+/* Make Homelab Setup sidebar link red (only in sidebar nav, not header title) */
+.side-bar nav.site-nav a.nav-list-link[href="/"] {
+  color: #e11d48 !important; /* rose-600 */
+}
+
+/* Fancy up the header site title with a subtle theme-aware gradient */
+.site-header .site-title {
+  font-weight: 800;
+  letter-spacing: .2px;
+  text-decoration: none;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Switch gradient for dark theme to improve contrast */
+html[data-theme="dark"] .site-header .site-title {
+  background: linear-gradient(90deg, #6ea8fe, #9f7aea);
+}
+
+/* Add a gentle underline on hover for personality */
+.site-header .site-title:hover {
+  text-decoration: underline wavy currentColor 1.5px;
+  text-underline-offset: 3px;
+}
+
+/* -----------------------------
+   Code blocks: theme-aware styling
+   ----------------------------- */
+:root {
+  --code-bg: #0f172a0a;          /* light slate tint */
+  --code-border: #e5e7eb;        /* gray-200 */
+  --code-text: #0f172a;          /* slate-900 */
+  --code-comment: #64748b;       /* slate-500 */
+  --code-keyword: #7c3aed;       /* violet-600 */
+  --code-string: #047857;        /* emerald-700 */
+  --code-number: #b91c1c;        /* red-700 */
+  --code-attr: #1d4ed8;          /* blue-700 */
+  --code-hll: #fde68a80;         /* amber-300 @ 50% */
+}
+html[data-theme="dark"] {
+  --code-bg: #0b1020;            /* deep navy */
+  --code-border: #2a2f3a;        /* soft border */
+  --code-text: #e5e7eb;          /* gray-200 */
+  --code-comment: #94a3b8;       /* slate-300 */
+  --code-keyword: #a78bfa;       /* violet-400 */
+  --code-string: #34d399;        /* emerald-400 */
+  --code-number: #fca5a5;        /* red-300 */
+  --code-attr: #93c5fd;          /* blue-300 */
+  --code-hll: #33415580;         /* slate-700 @ 50% */
+}
+
+/* Block code containers */
+.highlighter-rouge,
+.highlight,
+pre.highlight,
+pre code {
+  background: var(--code-bg) !important;
+  color: var(--code-text) !important;
+}
+.highlighter-rouge .highlight,
+.language-*.highlighter-rouge .highlight {
+  background: var(--code-bg) !important;
+}
+.highlight {
+  border: 1px solid var(--code-border);
+  border-radius: 10px;
+  overflow: auto;
+}
+.highlight pre {
+  padding: 0.85rem 1rem;
+  margin: 0;
+}
+
+/* Remove harsh highlighted-line background; make it subtle */
+.highlight .hll {
+  background: var(--code-hll) !important;
+}
+
+/* Inline code */
+code:not(pre code),
+.main-content code:not(pre code) {
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  border-radius: 6px;
+  padding: .1rem .3rem;
+  color: var(--code-text);
+}
+
+/* Rouge token colors (small, tasteful palette) */
+.highlight .c { color: var(--code-comment); font-style: italic; }               /* Comment */
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr { color: var(--code-keyword); }
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx {
+  color: var(--code-string);
+}
+.highlight .mi, .highlight .mf, .highlight .mh, .highlight .il { color: var(--code-number); }
+.highlight .na, .highlight .nb, .highlight .no, .highlight .nt, .highlight .nv, .highlight .nx { color: var(--code-attr); }
+.highlight .o, .highlight .p { color: var(--code-text); }
+
+/* Smooth scrollbar inside code blocks */
+.highlight::-webkit-scrollbar { height: 10px; }
+.highlight::-webkit-scrollbar-thumb { background: #c7cdd4; border-radius: 6px; }
+html[data-theme="dark"] .highlight::-webkit-scrollbar-thumb { background: #495061; }
+
+/* Selection inside code */
+.highlight ::selection { background: var(--code-hll); }
