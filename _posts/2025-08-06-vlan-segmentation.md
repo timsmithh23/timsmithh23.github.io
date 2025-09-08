@@ -2,6 +2,9 @@
 title: "VLAN Segmentation and Routing"
 layout: default
 date: 2025-08-06
+nav_exclude: true
+upcoming: true
+published: false
 ---
 **Date:** 2025-08-06
 
@@ -10,6 +13,8 @@ date: 2025-08-06
 ## Introduction
 
 In this project, I segmented my homelab network using VLANs to improve security and organization. I set up inter-VLAN routing so that devices on different VLANs could communicate when needed, while keeping traffic isolated.
+
+![Networking Topology](assets/images/netdiagram.png)
 
 ## Objective
 

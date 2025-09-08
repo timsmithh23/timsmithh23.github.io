@@ -1,3 +1,22 @@
+/* Click-to-enlarge image lightbox */
+.lightbox-img { cursor: zoom-in; }
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.lightbox-overlay.open { display: flex; }
+.lightbox-overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+.lightbox-overlay .close-area { position: absolute; inset: 0; }
 /* Make Homelab Setup sidebar link red (only in sidebar nav, not header title) */
 .side-bar nav.site-nav a.nav-list-link[href="/"] {
   color: #e11d48 !important; /* rose-600 */
@@ -7,22 +26,33 @@
 .site-header .site-title {
   font-weight: 800;
   letter-spacing: .2px;
-  text-decoration: none;
+  text-decoration: none !important;
+  /* keep default flex from theme to avoid vertical clipping */
+  display: flex;
+  align-items: center;
+  line-height: 1.25;
+  font-size: 0.95rem;
   background: linear-gradient(90deg, #ff7e5f, #feb47b);
   -webkit-background-clip: text;
   background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: transparent;
 }
 
 /* Switch gradient for dark theme to improve contrast */
 html[data-theme="dark"] .site-header .site-title {
-  background: linear-gradient(90deg, #6ea8fe, #9f7aea);
+  background: none !important;
+  color: #fff !important;
+  -webkit-background-clip: border-box !important;
+  background-clip: border-box !important;
+  -webkit-text-fill-color: #fff !important;
 }
 
-/* Add a gentle underline on hover for personality */
-.site-header .site-title:hover {
-  text-decoration: underline wavy currentColor 1.5px;
-  text-underline-offset: 3px;
+/* Ensure no underline ever shows on the gradient title (prevents visual line/clipping) */
+.site-header .site-title:hover,
+.site-header .site-title:focus,
+.site-header .site-title:active {
+  text-decoration: none !important;
 }
 
 /* -----------------------------
@@ -105,3 +135,26 @@ html[data-theme="dark"] .highlight::-webkit-scrollbar-thumb { background: #49506
 
 /* Selection inside code */
 .highlight ::selection { background: var(--code-hll); }
+
+/* Simple 2x2 gallery grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+.gallery-grid img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.12);
+}
+@media (max-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .gallery-grid img {
+    height: 220px;
+  }
+}

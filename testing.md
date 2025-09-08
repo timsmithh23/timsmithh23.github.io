@@ -1,6 +1,8 @@
+---
 title: Mistakes I've Made
 layout: default
 nav_order: 3
+permalink: /mistakes/
 ---
 
 # Mistakes I've Made

@@ -1,54 +1,36 @@
 ---
-title: Homelab Setup
+title: Homelab Overview
 layout: default
 nav_order: 1
 ---
 
-# Configuring Proxmox Networking for My Homelab
+# Homelab Overview
 
-Setting up Proxmox on my laptop was step one for building my mini enterprise network lab. Here’s how I configured the networking so my VMs can talk to each other and the internet.
+This Homelab is a hands-on learning environment designed for managing self-hosted servers, improving network security, and experimenting with applications and services. It allows me to practice real-world administration and networking tasks that go far beyond what a textbook can teach.
 
-## Topology
+## Lab Purpose
 
-![Homelab Topology](assets/images/netdiagram.png)
+- Gain practical experience with server and network management.
+- Improve security and organization in a segmented network environment.
+- Explore installation, configuration, and management of useful software and services.
 
-## Network Bridge Setup
+## Lab Components
 
-Proxmox uses Linux Bridges (like virtual switches) to connect VMs to the physical network interfaces on my laptop. I created two main bridges:
+- Proxmox VE on Dell Inspiron and Dell Optiplex hosts for virtualization.
+- Client machine: Windows 11 PC for SSH and Proxmox GUI access.
+- Networking hardware: T-Mobile home internet gateway and a Cisco Layer 3 switch.
 
-- vmbr0 – Connected to my laptop’s physical Ethernet (enx607d094beec2) and handles WAN/internet traffic.
-	- IP: None assigned on the Proxmox host; it just passes traffic.
-	- Connected to home router: 192.168.12.0/24
+![Network Diagram]({{ '/assets/images/netdiagram.png' | relative_url }})
 
-- vmbr1 – Internal LAN bridge for VMs to communicate privately.
-	- IP Address on Proxmox host: 192.168.12.130/24
-	- Gateway: 192.168.12.1 (my router)
+## Recent Posts
 
-## Why Two Bridges?
+<ul>
+  {% for post in site.posts %}
+    {% if post.published %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a> - <small>{{ post.date | date: "%B %d, %Y" }}</small>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
 
-- vmbr0 connects VMs to the internet through my home router.
-- vmbr1 is for internal lab traffic, isolated from the outside network but still routable.
-
-## Key Config Snippet (/etc/network/interfaces)
-
-```ini
-auto lo
-iface lo inet loopback
-
-auto enx607d094beec2
-iface enx607d094beec2 inet manual
-
-auto vmbr0
-iface vmbr0 inet manual
-		bridge-ports enx607d094beec2
-		bridge-stp off
-		bridge-fd 0
-
-auto vmbr1
-iface vmbr1 inet static
-		address 192.168.12.130/24
-		gateway 192.168.12.1
-		bridge-ports none
-		bridge-stp off
-		bridge-fd 0
-```

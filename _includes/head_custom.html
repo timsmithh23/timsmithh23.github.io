@@ -1,10 +1,27 @@
+<meta charset="UTF-8">
+<title>Tim's Homelab Projects</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JBFPSR92FW"></script>
 <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JBFPSR92FW');
+</script>
+<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+<script src="{{ '/assets/js/lightbox.js' | relative_url }}" defer></script><script>
 // Load saved or default color scheme early to avoid flash
 (function(){
   var mode = localStorage.getItem('jtd-color-scheme') || 'auto';
   var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   var theme = mode === 'auto' ? (prefersDark ? 'dark' : 'light') : mode;
-  var link = document.querySelector('link[rel="stylesheet"][href^="/assets/css/just-the-docs-"]');
+  // Apply theme attributes early so CSS rules that rely on [data-theme] take effect
+  try {
+    document.documentElement.setAttribute('data-theme-mode', theme);
+    document.documentElement.setAttribute('data-theme', theme === 'auto' ? (prefersDark ? 'dark' : 'light') : theme);
+  } catch (e) { /* ignore on older browsers */ }
+  // Prefer the base theme link by id if present, else fall back to first matching
+  var link = document.getElementById('jtd-theme-link') || document.querySelector('link[rel="stylesheet"][href^="/assets/css/just-the-docs-"]');
   if (link) {
     link.href = '/assets/css/just-the-docs-' + theme + '.css';
   }

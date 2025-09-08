@@ -22,5 +22,7 @@ defaults:
 just_the_docs:
   custom_css:
     - "assets/css/custom.css"
+  custom_js:
+    - "assets/js/lightbox.js"
   color_scheme_toggle: true
   color_scheme_default: auto
