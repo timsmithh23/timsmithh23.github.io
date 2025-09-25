@@ -6,7 +6,7 @@ description: How I configured Proxmox networking for my mini enterprise lab
 
 # Configuring Proxmox Networking for My Homelab
 
-Setting up Proxmox on my laptop was step one for building my mini enterprise network lab. Here’s how I configured the networking so my VMs can talk to each other and the internet.
+Setting up Proxmox on my laptop was step one for building my mini enterprise network lab. This is how I configured the networking so my VMs can talk to each other and the internet.
 
 ## Topology
 
