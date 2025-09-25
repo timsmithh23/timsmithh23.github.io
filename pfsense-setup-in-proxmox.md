@@ -3,7 +3,7 @@ title: pfSense Setup in Proxmox
 layout: default
 nav_order: 2
 nav_exclude: true
-published: false
+published: true
 ---
 
 # Setting up pfSense in Proxmox

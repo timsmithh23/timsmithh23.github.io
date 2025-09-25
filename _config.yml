@@ -3,6 +3,8 @@ description: My journey with homelab projects to develop my I.T. skills!
 theme: just-the-docs
 remote_theme: just-the-docs/just-the-docs
 
+favicon: "/assets/icons/favicon-32x32.png"
+
 url: "https://timsmithh23.github.io"
 
 aux_links:

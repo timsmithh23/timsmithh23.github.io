@@ -25,8 +25,8 @@ This setup is **internal only** (no WAN) since I’m using it strictly for labbi
   - Disks: **20GB (VirtIO)**  
   - CPU: **2 cores**  
   - RAM: **2GB**  
-- Network:  
-  - `vmbr0` → used as **LAN (192.168.12.169)**  
+- Network:
+  - `vmbr0` as LAN (192.168.12.169/24)
 - Installed pfSense ISO in the VM  
 
 ![Proxmox Network Setup]({{ '/assets/images/proxmoxnetworksetup.png' | relative_url }})
@@ -34,10 +34,10 @@ This setup is **internal only** (no WAN) since I’m using it strictly for labbi
 ---
 
 ## Interface Setup
-- **WAN**: not configured (disabled, lab is internal only)  
-- **LAN**:  
-  - Static IP: `192.168.12.169/24`  
-  - DHCP Server: enabled (range `192.168.12.100 – 192.168.12.200`)  
+- WAN: not configured (internal-only lab)
+- LAN:
+  - Static IP: 192.168.12.169/24
+  - DHCP Server: enabled (range 192.168.12.100–192.168.12.200)
 
 ---
 
