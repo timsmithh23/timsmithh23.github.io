@@ -8,25 +8,6 @@ permalink: /proxmox-homelab/
 
 Welcome! This section contains guides and walkthroughs for projects running in my Proxmox homelab.
 
-## Articles in this section
-
-{% assign children = site.pages | where: "parent", page.title %}
-{% if children and children.size > 0 %}
-<ul>
-	{% for child in children %}
-		<li>
-			<a href="{{ child.url | relative_url }}">{{ child.title }}</a>
-			{% if child.date %} - <small>{{ child.date | date: "%B %d, %Y" }}</small>{% endif %}
-			{% if child.excerpt %}
-				<p class="text-small">{{ child.excerpt }}</p>
-			{% endif %}
-		</li>
-	{% endfor %}
-</ul>
-{% else %}
-_No child pages found._
-{% endif %}
-
 ## Posts related to Proxmox
 
 {% assign proxmox_posts = site.posts | where_exp: "p", "p.url contains '/proxmox' or p.url contains 'proxmox' or p.categories contains 'proxmox'" %}

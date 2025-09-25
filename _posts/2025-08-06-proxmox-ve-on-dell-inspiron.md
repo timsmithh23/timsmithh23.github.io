@@ -79,7 +79,7 @@ iface vmbr1 inet manual
     bridge-vids 2-50
 ```
 
-Replace `<YOUR-NIC-NAME>` with your actual NIC (for example, `enx607d094beec2`). If you prefer the GUI, you can make the same changes in Datacenter → Node → System → Network.
+Replace `<YOUR-NIC-NAME>` with your actual NIC (for example, `enx123456789abc`). If you prefer the GUI, you can make the same changes in Datacenter → Node → System → Network.
 
 After saving and restarting networking, I confirmed routing was correct within my LAN. Only then was I able to access the Proxmox web interface from my Windows 11 computer (192.168.12.104, same subnet).
 
@@ -96,15 +96,9 @@ Once the node came online, the Proxmox Summary page showed system resources and 
 
 ![Proxmox Summary Page]({{ '/assets/images/proxmox specs.png' | relative_url | replace: ' ', '%20' }})
 
-## 4) Storage Layout (100 GB system)
+## 5) Post-Install QOL Tweaks
 
-During the installer, I left the Proxmox system/root disk around 100 GB. VM storage used the default `local-lvm` thin pool on the primary disk. You can confirm storage targets under Datacenter → Storage and adjust IDs or content types (ISO, VZDump, images) as needed.
-
-If you plan to host many VMs/containers, consider adding a second disk just for VM images or creating a new LVM-thin pool to keep the root disk lean.
-
-## 5) Post‑Install QOL Tweaks
-
-- Switch to the no‑subscription repository (optional) to clear the enterprise repo warning.
+- Switch to the no-subscription repository (optional) to clear the enterprise repo warning.
 - Update packages and reboot when needed.
 - Set timezone and NTP under Datacenter → Node → System → Time.
 
@@ -112,7 +106,7 @@ If you plan to host many VMs/containers, consider adding a second disk just for 
 
 With Proxmox installed, you can now:
 
-- Create VLAN‑tagged networks for lab isolation
+- Create VLAN-tagged networks for lab isolation
 - Spin up pfSense as a router/firewall VM
 - Deploy containers (LXC) or VMs for apps like Nextcloud, monitoring, or dev tools
 

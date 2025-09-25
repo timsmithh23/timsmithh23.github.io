@@ -18,7 +18,7 @@ Setting up Proxmox on my laptop was step one for building my mini enterprise net
 
 Proxmox uses Linux Bridges (like virtual switches) to connect VMs to the physical network interfaces on my laptop. I created two main bridges:
 
-- vmbr0 – Connected to my laptop’s physical Ethernet (enx607d094beec2) and handles WAN/internet traffic.
+- vmbr0 – Connected to my laptop’s physical Ethernet (enx123456789abc) and handles WAN/internet traffic.
   - IP: None assigned on the Proxmox host; it just passes traffic.
   - Connected to home router: 192.168.12.0/24
 
@@ -37,12 +37,12 @@ Proxmox uses Linux Bridges (like virtual switches) to connect VMs to the physica
 auto lo
 iface lo inet loopback
 
-auto enx607d094beec2
-iface enx607d094beec2 inet manual
+auto enx123456789abc
+iface enx123456789abc inet manual
 
 auto vmbr0
 iface vmbr0 inet manual
-    bridge-ports enx607d094beec2
+    bridge-ports enx123456789abc
     bridge-stp off
     bridge-fd 0
 
