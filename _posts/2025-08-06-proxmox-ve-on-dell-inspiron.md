@@ -40,7 +40,7 @@ Key install choices I used:
 
 ## 2) Networking Setup (Manual Configuration)
 
-Proxmox didn’t recognize my LAN Ethernet interface out of the box, so before I could access the web GUI, I had to manually configure the networking:P
+Proxmox didn’t recognize my LAN Ethernet interface automatically, so before I could access the web GUI, I had to manually configure the networking:P
 
 First, I ran `ip a` to identify my NIC and current interface state:
 
