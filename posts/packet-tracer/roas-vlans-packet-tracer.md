@@ -1,5 +1,5 @@
 ---
-title: ROAS: VLAN Tagging + Trunking
+title: "ROAS: VLAN Tagging + Trunking"
 layout: default
 parent: Packet Tracer
 nav_order: 1

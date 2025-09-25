@@ -6,10 +6,7 @@ parent: Inspiron Server
 nav_order: 2
 permalink: /proxmox-homelab/inspiron-server/pfsense-test/
 ---
-title: pfSense Setup
-{% if post %}
-{{ post.content }}
-{% else %}
-_Post not found_
-{% endif %}
-{% endif %}
+
+This is a placeholder page for pfSense setup under the Inspiron Server section.
+Replace this content with your actual pfSense configuration notes, screenshots,
+and any networking diagrams as needed.
