@@ -26,7 +26,7 @@ Configuring it on VirtualBox.
 
 Next, I had to statically set the IP to 192.168.10.10/24, so I ran sudo nano /etc/netplan/50-cloud-init.yaml , which stores th network configuration. For DNS, I'll be using Quad9, which is 9.9.9.9
 
-![Splunk Netplan Configuration]({{ '/assets/images/active-directory/splunk-netplan-config.png' | relative_url }})
+![Splunk Server Configuration]({{ '/assets/images/active-directory/splunk-server-configuration.png' | relative_url }})
 
 #  #2: Windows Server 2025
 Next, I configured the .iso file on Orcale Virtualbox
