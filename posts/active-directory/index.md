@@ -229,7 +229,7 @@ On the Windows Server:
 
 Let's create a test user in AD with a weak password for demonstration. I'll name him Bob Ross, with his username being **bross**. 
 
-![Creating AD User Bob Ross]({{ '/assets/images/active-directory/creating-ad-user-bob-ross.png' | relative_url }})
+![Creating AD User Bob Ross]({{ '/assets/images/active-directory/bob-ross.png' | relative_url }})
 
 On Windows 11 Target:
 

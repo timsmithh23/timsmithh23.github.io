@@ -4,7 +4,7 @@ layout: post
 date: 2025-11-18
 published: true
 categories: [homelab, active-directory, splunk]
-nav_order: 1
+nav_order: 2
 ---
 
 # Active Directory Security Lab: Splunk Monitoring and Simulated Attacks
@@ -229,7 +229,7 @@ On the Windows Server:
 
 Let's create a test user in AD with a weak password for demonstration. I'll name him Bob Ross, with his username being **bross**. 
 
-![Creating AD User Bob Ross]({{ '/assets/images/active-directory/creating-ad-user-bob-ross.png' | relative_url }})
+![Creating AD User Bob Ross]({{ '/assets/images/active-directory/bob-ross.png' | relative_url }})
 
 On Windows 11 Target:
 
@@ -328,28 +328,5 @@ This homelab setup provided me a good foundation for learning Active Directory m
 
 ## Upcoming: Network Automation with Ansible
 
-In my next blog post, I'll be exploring **network automation** using **Ansible** to streamline network device configuration and management. This upcoming project will cover:
-
-### What I'll Be Building:
-- **Automated network device provisioning** using Ansible playbooks
-- **Configuration management** for switches, routers, and firewalls
-- **Network inventory management** and dynamic device discovery
-- **Automated backup and restore** of network configurations
-- **Compliance checking** and configuration drift detection
-
-### Technologies I'll Be Using:
-- **Ansible Core** with network-specific modules
-- **YAML playbooks** for infrastructure as code
-- **Jinja2 templating** for dynamic configuration generation
-- **Git version control** for playbook management
-- **Network devices** (Cisco, pfSense, or GNS3 simulated environment)
-
-### Key Learning Objectives:
-- Understanding **Infrastructure as Code (IaC)** principles
-- Implementing **network automation workflows**
-- **Version controlling network configurations**
-- **Reducing manual errors** and improving consistency
-- **Scaling network operations** efficiently
-
-This project will demonstrate how modern DevOps practices can be applied to network operations, making network management more efficient, reliable, and scalable. Stay tuned for the detailed walkthrough!
+In my next blog post, I'll be exploring automated network device configuration and management using Ansible.
 

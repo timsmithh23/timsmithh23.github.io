@@ -1,6 +1,6 @@
 title: Mistakes I've Made
 layout: default
-nav_order: 3
+nav_exclude: true
 ---
 
 # Mistakes I've Made

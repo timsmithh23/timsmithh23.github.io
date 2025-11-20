@@ -9,5 +9,4 @@ nav_order: 4
 
 Here are the items I'm planning to work on next when I have free time:
 
-- Deploying Core Services (DNS/DHCP and Firewall Server) <span class="label label-yellow">Upcoming</span>
-- Active Directory Simulated Infrastructure Environment <span class="label label-yellow">Upcoming</span>
+- Network Automation with Ansible <span class="label label-yellow">Upcoming</span>
