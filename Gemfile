@@ -8,5 +8,5 @@ platforms :windows, :jruby do
   gem "wdm", "~> 0.2.0"
 end
 
-gem "just-the-docs", "0.10.1" # pinned to the current release
+gem "just-the-docs", "0.11.0" # pinned to the current release
 # gem "just-the-docs"        # always download the latest release
