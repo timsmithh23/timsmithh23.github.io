@@ -20,10 +20,6 @@ My homelab is hands-on learning environment designed for managing my self-hosted
   {% endfor %}
 </ul>
 
-## Current Network Topology
-
-![Network Diagram]({{ '/assets/images/active-directory/Active Directory Server.drawio.png' | relative_url }})
-
 ## Lab Setup
 
 - Inspiron Laptop  

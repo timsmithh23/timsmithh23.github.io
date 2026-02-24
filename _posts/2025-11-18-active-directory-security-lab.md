@@ -326,7 +326,3 @@ These tests will generate telemetry that can be monitored in Splunk, allowing us
 
 This homelab setup provided me a good foundation for learning Active Directory management (which I used at my IT Support job already), setting up and logging with Splunk, and basic cybersecurity simulation with A.R.T (Atomic Red Team).
 
-## Upcoming: Network Automation with Ansible
-
-In my next blog post, I'll be exploring automated network device configuration and management using Ansible.
-

@@ -1,8 +1,8 @@
 ---
 title: "ROAS: VLAN Tagging + Trunking"
 layout: default
-parent: Packet Tracer
-nav_order: 1
+parent: Network & Security Labs
+nav_order: 2
 description: Router-on-a-Stick (ROAS) VLAN tagging/trunking lab in Cisco Packet Tracer with an embedded PDF walkthrough.
 ---
 

@@ -4,7 +4,8 @@ layout: post
 date: 2025-11-18
 published: true
 categories: [homelab, active-directory, splunk]
-nav_order: 3
+parent: Network & Security Labs
+nav_order: 1
 ---
 
 # Active Directory Security Lab: Splunk Monitoring and Simulated Attacks
@@ -325,31 +326,4 @@ These tests will generate telemetry that can be monitored in Splunk, allowing us
 ## Conclusion
 
 This homelab setup provided me a good foundation for learning Active Directory management (which I used at my IT Support job already), setting up and logging with Splunk, and basic cybersecurity simulation with A.R.T (Atomic Red Team).
-
-## Upcoming: Network Automation with Ansible
-
-In my next blog post, I'll be exploring **network automation** using **Ansible** to streamline network device configuration and management. This upcoming project will cover:
-
-### What I'll Be Building:
-- **Automated network device provisioning** using Ansible playbooks
-- **Configuration management** for switches, routers, and firewalls
-- **Network inventory management** and dynamic device discovery
-- **Automated backup and restore** of network configurations
-- **Compliance checking** and configuration drift detection
-
-### Technologies I'll Be Using:
-- **Ansible Core** with network-specific modules
-- **YAML playbooks** for infrastructure as code
-- **Jinja2 templating** for dynamic configuration generation
-- **Git version control** for playbook management
-- **Network devices** (Cisco, pfSense, or GNS3 simulated environment)
-
-### Key Learning Objectives:
-- Understanding **Infrastructure as Code (IaC)** principles
-- Implementing **network automation workflows**
-- **Version controlling network configurations**
-- **Reducing manual errors** and improving consistency
-- **Scaling network operations** efficiently
-
-This project will demonstrate how modern DevOps practices can be applied to network operations, making network management more efficient, reliable, and scalable. Stay tuned for the detailed walkthrough!
 

@@ -30,24 +30,26 @@
   /* keep default flex from theme to avoid vertical clipping */
   display: flex;
   align-items: center;
+  justify-content: center;
   line-height: 1.25;
-  font-size: 0.75rem;
+  font-size: 0.55rem;
   max-width: 100%;
   white-space: normal;
   overflow-wrap: break-word;
-  background: linear-gradient(90deg, #ff7e5f, #feb47b);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
+  color: #ff7e5f;
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-text-fill-color: #ff7e5f;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem 0;
+  text-align: center;
 }
 
-/* Switch gradient for dark theme to improve contrast */
+/* Switch to white for dark theme */
 html[data-theme="dark"] .site-header .site-title {
-  background: none !important;
   color: #fff !important;
-  -webkit-background-clip: border-box !important;
-  background-clip: border-box !important;
   -webkit-text-fill-color: #fff !important;
 }
 
