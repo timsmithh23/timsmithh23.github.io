@@ -31,7 +31,10 @@
   display: flex;
   align-items: center;
   line-height: 1.25;
-  font-size: 0.95rem;
+  font-size: 0.75rem;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: break-word;
   background: linear-gradient(90deg, #ff7e5f, #feb47b);
   -webkit-background-clip: text;
   background-clip: text;

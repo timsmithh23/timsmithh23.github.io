@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="svg-link" viewBox="0 0 24 24">
+        <title>Link</title>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.71"></path></svg>
+      </symbol>
+      <symbol id="svg-menu" viewBox="0 0 24 24">
+        <title>Menu</title>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </symbol>
+      <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+        <title>Expand</title>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </symbol>
+    </svg>
+
+    <div class="page-wrap">
+      <div class="side-bar">
+        <button class="menu-trigger air-button" aria-label="Menu" aria-expanded="false">
+          <svg class="icon" viewBox="0 0 24 24" role="img"><use xlink:href="#svg-menu"></use></svg>
+        </button>
+        {% include nav.html %}
+      </div>
+
+      <div class="main-wrap">
+        {% include header.html %}
+        <div id="main-content-wrap" class="main-content-wrap">
+          {% unless page.url == "/" %}
+            {% if page.collection == "posts" %}
+              <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+                <ol>
+                  <li><a href="{{ "/" | relative_url }}">Home</a></li>
+                  <li><span aria-current="page">{{ page.title }}</span></li>
+                </ol>
+              </nav>
+            {% endif %}
+          {% endunless %}
+          <div id="main-content" class="main-content" role="main">
+            {% if page.layout == "post" %}
+              <header>
+                <h1 class="page-heading">{{ page.title }}</h1>
+                {% if page.description %}
+                  <p class="page-description">{{ page.description }}</p>
+                {% endif %}
+                {% if site.show_excerpts != true and page.date %}
+                  <p class="post-meta">{{ page.date | date: "%b %d, %Y" }}</p>
+                {% endif %}
+              </header>
+            {% endif %}
+            {{ content }}
+
+            {% if page.has_children == true and page.children != null %}
+              <hr>
+              <h2 class="page-heading">{{ page.child_nav_title }}</h2>
+              <ul>
+                {% for child in page.children %}
+                  <li>
+                    <a href="{{ child.url | relative_url }}">{{ child.title }}</a>{% if child.summary %} – {{ child.summary }}{% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

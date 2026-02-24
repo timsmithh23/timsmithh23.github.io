@@ -1,37 +1,77 @@
 ---
-title: Homelab Overview
+title: Home Page
 layout: default
 nav_order: 1
 ---
 
-# Welcome!
+# LoNSeMonSy: Local Network Security Monitoring System
 
-My homelab is hands-on learning environment designed for managing my self-hosted servers, improving network security, and experimenting with applications and services. It allows me to practice real-world administration and networking tasks that I can apply my book knowledge in, while sharing my progress!
+Welcome to LoNSeMonSy – a lightweight, intelligent network security monitoring system designed for real-time threat detection and response. My capstone project combines modern DevOps practices with security engineering to make network monitoring accessible to small labs, home networks, and educational environments.
 
-## Recent Posts
+## What is LoNSeMonSy?
 
-<ul>
-  {% for post in site.posts %}
-    {% if post.published %}
-      <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a> - <small>{{ post.date | date: "%B %d, %Y" }}</small>
-      </li>
-    {% endif %}
-  {% endfor %}
-</ul>
+**LoNSeMonSy** (Local Network Security Monitoring System) detects suspicious activity on networks, stores security events, and delivers clear alerts to administrators. It's built for:
 
-## Current Network Topology
+- **Network Administrators** managing enterprise lab environments
+- **Security Students** learning threat detection in controlled environments
+- **Homelab Enthusiasts** protecting their personal networks without expensive enterprise tools
 
-![Network Diagram]({{ '/assets/images/active-directory/Active Directory Server.drawio.png' | relative_url }})
+## How It Works
 
-## Lab Setup
+### Data Collection
+I collect inputs from multiple sources:
+- **Authentication logs** – login attempts, failed passwords, unauthorized access
+- **System logs** – user activities, process executions, system events
+- **Network monitoring** – detection of new devices connecting to the network
+- **Security policies** – admin-defined detection rules and custom alerts
 
-- Inspiron Laptop  
-  <img src="{{ '/assets/images/dell-inspiron.jpeg' | relative_url }}" alt="Inspiron Laptop" width="220" loading="lazy" />
-- Dell Optiplex Mini Desktop  
-  <img src="{{ '/assets/images/dell-optiplex.jpeg' | relative_url }}" alt="Dell Optiplex Mini Desktop" width="220" loading="lazy" />
-- Client machine: Windows 11 PC  
-  <img src="{{ '/assets/images/white-pc-rgb.JPG' | relative_url }}" alt="Windows 11 Client PC" width="220" loading="lazy" />
-- T-Mobile home internet gateway
-- Layer 3 Switch: Cisco WS-C3560CX-12TC-S, 12 Port 3560-CX Data IP Base Switch 12 GE  
-  <img src="{{ '/assets/images/cisco-switch.jpeg' | relative_url }}" alt="Cisco 3560-CX Switch" width="220" loading="lazy" />
+### System Architecture
+
+The system leverages distributed edge computing:
+
+- **Data Collection**: Raspberry Pi acts as a network sensor, monitoring traffic at the edge
+- **Compute**: Virtual machines on Proxmox VE or VMware ESXi host the analysis components
+- **Storage**: PostgreSQL database persists all security events and audit logs
+- **Visualization**: Grafana dashboard provides real-time security intelligence
+- **Intelligence**: AI component explains alerts in human-readable language
+
+### Alert & Response Flow
+
+```
+Logs & Traffic → Processing & Analysis → PostgreSQL Storage → Grafana Alerts → AI Explanation
+```
+
+**Example Alert:**
+- **Event**: SSH brute force attack detected from 10.0.0.25
+- **System Response**: Generate high-severity alert
+- **AI Explanation**: "A device is repeatedly guessing SSH passwords. Recommend quarantining source IP or enabling fail2ban rules."
+- **Admin Action**: Review alert and implement mitigation
+
+## The Complete Flow
+
+1. **Data Ingestion** – Logs and network traffic collected from sensors
+2. **Real-time Analysis** – Pattern matching and rule evaluation
+3. **Event Storage** – Security events persisted in PostgreSQL
+4. **Visualization** – Grafana dashboards display threats in real-time
+5. **AI Insights** – Machine learning explains the alert and suggests remediation
+
+## Why LoNSeMonSy?
+
+Enterprise SIEM solutions like Splunk or IBM QRadar are powerful but expensive and complex. They're often overkill for:
+- University lab environments
+- Home network security
+- Small research projects
+- Educational demonstrations
+
+**LoNSeMonSy solves this** by providing a lightweight, open-source SIEM-style system that combines:
+- ✓ Real-time monitoring and alerting
+- ✓ Intelligent threat visualization
+- ✓ AI-powered explanations
+- ✓ Affordable infrastructure
+- ✓ Easy deployment on consumer hardware
+
+## At Its Core
+
+I built something that takes raw machine noise—thousands of logs, network packets, system events—and transforms it into **human-understandable intelligence**. That's real security engineering.
+
+This is the intersection of DevOps automation, security analysis, and user-centric design—proving that sophisticated security monitoring doesn't require enterprise budgets or complexity.

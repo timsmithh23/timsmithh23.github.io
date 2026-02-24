@@ -4,7 +4,7 @@ layout: post
 date: 2025-11-18
 published: true
 categories: [homelab, active-directory, splunk]
-nav_order: 1
+nav_order: 3
 ---
 
 # Active Directory Security Lab: Splunk Monitoring and Simulated Attacks
