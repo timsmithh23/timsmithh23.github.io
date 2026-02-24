@@ -1,44 +1,35 @@
 ---
-title: LoNSeMonSy Introduction
+title: Home
 layout: default
-parent: Capstone Project
-nav_order: 2
+nav_order: 1
 ---
 
-<img src="{{ '/assets/images/LoNSeMonSy Logo.png' | relative_url }}" alt="LoNSeMonSy Logo" style="width: 320px; height: auto; display: block; margin: 0 auto 1rem;" />
+# Welcome
 
-# LoNSeMonSy: Local Network Security Monitoring System
+Hi! I'm Tim Smith, a senior IT student that's passionate about networking, security, and building labs to learn more about... everything. 
 
-Welcome to LoNSeMonSy, a lightweight, intelligent network security monitoring system designed for real-time threat detection and response. Our capstone project combines modern DevOps practices with security engineering to make network monitoring accessible to small labs, home networks, and educational environments.
+I’m planning to take the CCNA in April 2026. Because of that, I’m putting my homelabs on hold for now while I focus on studying, schoolwork, and a new capstone project. I’ll be documenting my progress over the next two semesters as my group and I design and build it. I think it’ll cover a lot of the areas I’m interested in, like network automation, security, load-balancing, AI APIs, open source system designs, and solving real problems as a team.
 
-## What is LoNSeMonSy?
+---
 
-LoNSeMonSy detects suspicious activity on networks, stores security events, and delivers clear alerts to administrators. It's built for:
+Explore my [Capstone Project]({{ '/capstone-project/' | relative_url }}) to learn about LoNSeMonSy, my network security monitoring system, or check out my [Homelab Overview]({{ '/homelab-overview/' | relative_url }}) for my infrastructure projects.
 
-- Network Administrators managing enterprise lab environments
-- Security Students learning threat detection in controlled environments
-- Homelab Enthusiasts protecting their personal networks without expensive enterprise tools
+## Project Progress
 
-## How It Works
+**Current Status:** {{ site.data.progress.status }}
 
-Our system architecture leverages:
+{% assign hue = site.data.progress.value | times: 1.2 %}
+<div style="background-color: #e9ecef; border-radius: 4px; height: 24px; overflow: hidden; margin-bottom: 1rem;">
+  <div style="background-color: hsl({{ hue }}, 100%, 50%); height: 100%; width: {{ site.data.progress.value }}%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.8rem; font-weight: bold; border-radius: 4px; transition: all 0.3s ease;">
+    {{ site.data.progress.value }}%
+  </div>
+</div>
 
-- **Data Collection**: Inputs from authentication logs, system logs, network monitoring, and security policies
-- **Network Sensor**: Raspberry Pi monitors traffic at the edge
-- **Compute**: Virtual machines on Proxmox VE or VMware ESXi host components
-- **Storage**: PostgreSQL database persists security events
-- **Visualization**: Grafana dashboard displays real-time intelligence
-- **Intelligence**: AI component explains alerts in human-readable language
+Capstone implementation in progress over two semesters.
 
-## Why LoNSeMonSy?
+---
 
-Enterprise SIEM solutions like Splunk are powerful but expensive and complex. LoNSeMonSy provides a lightweight, open-source alternative that combines:
+## My Resume
 
-- Real-time monitoring and alerting
-- Intelligent threat visualization
-- AI-powered explanations
-- Affordable infrastructure
-- Easy deployment on consumer hardware
-
-We're building a system that transforms raw machine data into human-understandable intelligence. That's real security engineering.
+<iframe src="{{ '/assets/images/Tim Smith 2026 Resume.pdf' | relative_url }}" width="100%" height="900px" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
 
