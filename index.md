@@ -12,7 +12,7 @@ I’m planning to take the CCNA in April 2026. Because of that, I’m putting my
 
 ---
 
-Explore my [Capstone Project]({{ '/capstone-project/' | relative_url }}) to learn about LoNSeMonSy, my network security monitoring system, or check out my [Homelab Overview]({{ '/homelab-overview/' | relative_url }}) for my infrastructure projects.
+Explore my [Capstone Project]({{ '/capstone-project.html' | relative_url }}) to learn about LoNSeMonSy, my network security monitoring system, or check out my [Homelab Overview]({{ '/homelab-overview.html' | relative_url }}) for my infrastructure projects.
 
 ## Project Progress
 
