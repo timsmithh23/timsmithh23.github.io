@@ -6,8 +6,8 @@ nav_order: 2
 description: Router-on-a-Stick (ROAS) VLAN tagging/trunking lab in Cisco Packet Tracer with an embedded PDF walkthrough.
 ---
 
- ## ROAS: VLAN Tagging + Trunking ##
- 
+## ROAS: VLAN Tagging + Trunking ##
+
 <div style="border: 1px solid var(--color-border-muted); border-radius: 6px; overflow: hidden; margin: 1rem 0;">
   <object data="{{ '/assets/images/Inter-VLAN ROAS Routing.pdf' | relative_url | replace: ' ', '%20' }}" type="application/pdf" width="100%" height="800px">
     <p>Your browser doesn’t support embedded PDFs. <a href="{{ '/assets/images/Inter-VLAN ROAS Routing.pdf' | relative_url | replace: ' ', '%20' }}" target="_blank" rel="noopener">Open the PDF</a>.</p>
