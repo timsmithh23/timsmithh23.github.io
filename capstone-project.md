@@ -5,7 +5,7 @@ nav_order: 2
 has_children: true
 ---
 
-<img src="{{ '/assets/images/LoNSeMonSy Logo.png' | relative_url }}" alt="LoNSeMonSy Logo" style="width: 320px; height: auto; display: block; margin: 0 auto 1rem;" />
+<img src="{{ '/assets/images/capstone/LoNSeMonSy Logo.png' | relative_url }}" alt="LoNSeMonSy Logo" style="width: 320px; height: auto; display: block; margin: 0 auto 1rem;" />
 
 # Capstone Project
 

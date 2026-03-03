@@ -10,7 +10,7 @@ Setting up Proxmox on my laptop was step one for building my mini enterprise net
 
 ## Topology
 
-![Homelab Topology](assets/images/netdiagram.png)
+![Homelab Topology](assets/images/homelab/netdiagram.png)
 
 ## Network Bridge Setup
 

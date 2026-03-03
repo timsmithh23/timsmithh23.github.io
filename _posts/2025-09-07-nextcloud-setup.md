@@ -7,7 +7,7 @@ nav_exclude: false
 ---
 
 <div style="text-align:center; margin: 0.5rem 0 1.25rem;">
-	<img alt="Nextcloud Logo" src="{{ '/assets/images/nextcloud logo.png' | relative_url }}" style="max-width: 320px; width: 50%; height: auto;" />
+	<img alt="Nextcloud Logo" src="{{ '/assets/images/nextcloud/nextcloud logo.png' | relative_url }}" style="max-width: 320px; width: 50%; height: auto;" />
 </div>
 
 

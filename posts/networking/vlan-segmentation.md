@@ -11,7 +11,7 @@ This is the landing page for VLAN Segmentation and Routing in my homelab. The fu
 
 [Read the full VLAN Segmentation and Routing article (Aug 6, 2025)]({% link _posts/2025-08-06-vlan-segmentation.md %})
 
-![Networking Topology](/assets/images/netdiagram.png)
+![Networking Topology](/assets/images/homelab/netdiagram.png)
 
 Summary:
 

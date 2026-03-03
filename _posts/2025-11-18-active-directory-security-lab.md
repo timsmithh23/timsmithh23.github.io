@@ -134,7 +134,7 @@ To monitor Windows events and forward them to our Splunk server, we need to inst
      .\Sysmon64.exe -i ..\sysmonconfig.xml
      ```
 
-![Sysmon Installation]({{ '/assets/images/active-directory/sysmon-installation.png' | relative_url }})
+![Sysmon Installation]({{ '/assets/images/active-directory/install-sysmon.png' | relative_url }})
 
 The Sysmon logs will automatically be forwarded to Splunk through the Universal Forwarder we installed earlier.
 
@@ -297,7 +297,7 @@ On the Windows 11 target machine:
    Import-Module "C:\AtomicRedTeam\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1" -Force
    ```
 
-![Atomic Red Team Installation]({{ '/assets/images/active-directory/atomic-red-team-install.png' | relative_url }})
+![Atomic Red Team Installation]({{ '/assets/images/active-directory/Atomic-Red-Team-Install.png' | relative_url }})
 
 ### Running Atomic Tests
 
@@ -313,7 +313,7 @@ Here are some example tests we can run to generate detection events. For a compl
    Invoke-AtomicTest T1136.001
    ```
 
-![Atomic Red Team T1136.001 Execution]({{ '/assets/images/active-directory/atomic-t1136-001.png' | relative_url }})
+![Atomic Red Team T1136.001 Execution]({{ '/assets/images/active-directory/T1136.001.png' | relative_url }})
 
 3. **T1082 - System Information Discovery**:
    ```powershell
@@ -324,5 +324,5 @@ These tests will generate telemetry that can be monitored in Splunk, allowing us
 
 ## Conclusion
 
-This homelab setup provided me a good foundation for learning Active Directory management (which I used at my IT Support job already), setting up and logging with Splunk, and basic cybersecurity simulation with A.R.T (Atomic Red Team).
+I had already used Active Directory at my IT Support job, but I'd never actually built it from scratch. Going through the full setup, from configuring the domain controller to joining machines and managing users, filled in a lot of gaps that day-to-day support work doesn't really cover. Having Splunk running alongside it made it more interesting too. Being able to run a brute force attack with Hydra and then pull up the exact event logs in Splunk showing every failed and successful login attempt made the whole thing feel a lot more real than just following a guide.
 

@@ -3,13 +3,13 @@ description: My journey with homelab projects to develop my I.T. skills!
 theme: just-the-docs
 remote_theme: just-the-docs/just-the-docs
 
-favicon: "/assets/icons/favicon-32x32.png"
+favicon: "/favicon.ico"
 
 url: "https://timsmithh23.github.io"
 
 aux_links:
   My LinkedIn: [https://www.linkedin.com/in/tim-smithh23/]
-  My Resume: [/assets/images/Tim Smith 2026 Resume.pdf]
+  My Resume: [/assets/images/resume/Tim Smith 2026 Resume.pdf]
 
 # Remove default Just the Docs footer text hg
 footer_content: ""
@@ -29,3 +29,11 @@ just_the_docs:
     - "assets/js/lightbox.js"
   color_scheme_toggle: true
   color_scheme_default: auto
+
+# Suppress Sass deprecation warnings from theme
+sass:
+  quiet_deps: true
+  silence_deprecations:
+    - import
+    - color-functions
+    - global-builtin

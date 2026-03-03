@@ -6,7 +6,7 @@ nav_order: 1
 
 # Welcome!
 
-Hi, I'm a senior IT student that's passionate about networking, security, and building labs to learn more about everything. 
+Hi, I'm a senior IT student passionate about networking, security, and building labs. This is where I document what I'm working on and what I learn along the way.
 
 
 ## Current Update: ##
@@ -30,7 +30,20 @@ Explore my [Capstone Project]({{ '/capstone-project.html' | relative_url }}) to 
 
 ---
 
+## Recent Posts
+
+{% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+{% for post in sorted_posts limit:5 %}
+- **[{{ post.title }}]({{ post.url | relative_url }})** - {{ post.date | date: "%B %d, %Y" }}
+{% endfor %}
+
+---
+
 ## My Resume
 
-<iframe src="{{ '/assets/images/Tim Smith 2026 Resume.pdf' | relative_url }}" width="100%" height="900px" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
+<iframe src="{{ '/assets/images/resume/Tim Smith 2026 Resume.pdf' | relative_url }}" width="100%" height="900px" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
+
+<p style="text-align: center; margin-top: 1rem;">
+  <a href="{{ '/assets/images/resume/Tim Smith 2026 Resume.pdf' | relative_url }}" target="_blank" style="display: inline-block; padding: 0.5rem 1.2rem; background-color: #0d6efd; color: white; border-radius: 6px; text-decoration: none; font-weight: bold;">📄 Can't see the resume? Open it here</a>
+</p>
 

@@ -23,11 +23,11 @@ My homelab is hands-on learning environment designed for managing my self-hosted
 ## Lab Setup
 
 - Inspiron Laptop  
-  <img src="{{ '/assets/images/dell-inspiron.jpeg' | relative_url }}" alt="Inspiron Laptop" width="220" loading="lazy" />
+  <img src="{{ '/assets/images/homelab/dell-inspiron.jpeg' | relative_url }}" alt="Inspiron Laptop" width="220" loading="lazy" />
 - Dell Optiplex Mini Desktop  
-  <img src="{{ '/assets/images/dell-optiplex.jpeg' | relative_url }}" alt="Dell Optiplex Mini Desktop" width="220" loading="lazy" />
+  <img src="{{ '/assets/images/homelab/dell-optiplex.jpeg' | relative_url }}" alt="Dell Optiplex Mini Desktop" width="220" loading="lazy" />
 - Client machine: Windows 11 PC  
-  <img src="{{ '/assets/images/white-pc-rgb.JPG' | relative_url }}" alt="Windows 11 Client PC" width="220" loading="lazy" />
+  <img src="{{ '/assets/images/homelab/white-pc-rgb.jpg' | relative_url }}" alt="Windows 11 Client PC" width="220" loading="lazy" />
 - T-Mobile home internet gateway
 - Layer 3 Switch: Cisco WS-C3560CX-12TC-S, 12 Port 3560-CX Data IP Base Switch 12 GE  
-  <img src="{{ '/assets/images/cisco-switch.jpeg' | relative_url }}" alt="Cisco 3560-CX Switch" width="220" loading="lazy" />
+  <img src="{{ '/assets/images/homelab/cisco-switch.jpeg' | relative_url }}" alt="Cisco 3560-CX Switch" width="220" loading="lazy" />

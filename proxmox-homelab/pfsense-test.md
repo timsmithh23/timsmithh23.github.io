@@ -8,7 +8,7 @@ permalink: /proxmox-homelab/inspiron-server/pfsense-test/
 ---
 
 <div style="text-align:center; margin: 0.5rem 0 1.25rem;">
-  <img alt="pfSense Logo" src="{{ '/assets/images/pfsense logo.png' | relative_url | replace: ' ', '%20' }}" style="max-width: 200px; width: 40%; height: auto;" />
+  <img alt="pfSense Logo" src="{{ '/assets/images/pfsense/pfsense logo.png' | relative_url | replace: ' ', '%20' }}" style="max-width: 200px; width: 40%; height: auto;" />
   <div class="text-small" style="color: var(--color-fg-muted);">pfSense • Virtual Firewall/Router</div>
 </div>
 
@@ -71,7 +71,7 @@ This guide walks you through installing and configuring pfSense as a virtual fir
 ## Result: pfSense Web UI
 
 <div style="text-align:center; margin: 1.5rem 0 1.5rem;">
-    <img alt="pfSense Web UI" src="{{ '/assets/images/pfsensehome.png' | relative_url }}" style="max-width: 420px; width: 60%; height: auto; border-radius: 8px;" />
+    <img alt="pfSense Web UI" src="{{ '/assets/images/pfsense/pfsensehome.png' | relative_url }}" style="max-width: 420px; width: 60%; height: auto; border-radius: 8px;" />
     <div class="text-small" style="color: var(--color-fg-muted);">pfSense running successfully in Proxmox</div>
 </div>
 

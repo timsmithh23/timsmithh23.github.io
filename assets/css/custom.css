@@ -1,3 +1,19 @@
+/* Site title logo icon */
+.site-title::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url('/assets/icons/favicon-32x32.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 8px;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+
 /* Click-to-enlarge image lightbox */
 .lightbox-img { cursor: zoom-in; }
 .lightbox-overlay {

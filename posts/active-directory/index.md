@@ -135,7 +135,7 @@ To monitor Windows events and forward them to our Splunk server, we need to inst
      .\Sysmon64.exe -i ..\sysmonconfig.xml
      ```
 
-![Sysmon Installation]({{ '/assets/images/active-directory/sysmon-installation.png' | relative_url }})
+![Sysmon Installation]({{ '/assets/images/active-directory/install-sysmon.png' | relative_url }})
 
 The Sysmon logs will automatically be forwarded to Splunk through the Universal Forwarder we installed earlier.
 
@@ -298,7 +298,7 @@ On the Windows 11 target machine:
    Import-Module "C:\AtomicRedTeam\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1" -Force
    ```
 
-![Atomic Red Team Installation]({{ '/assets/images/active-directory/atomic-red-team-install.png' | relative_url }})
+![Atomic Red Team Installation]({{ '/assets/images/active-directory/Atomic-Red-Team-Install.png' | relative_url }})
 
 ### Running Atomic Tests
 
@@ -314,7 +314,7 @@ Here are some example tests we can run to generate detection events. For a compl
    Invoke-AtomicTest T1136.001
    ```
 
-![Atomic Red Team T1136.001 Execution]({{ '/assets/images/active-directory/atomic-t1136-001.png' | relative_url }})
+![Atomic Red Team T1136.001 Execution]({{ '/assets/images/active-directory/T1136.001.png' | relative_url }})
 
 3. **T1082 - System Information Discovery**:
    ```powershell

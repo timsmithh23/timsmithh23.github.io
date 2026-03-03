@@ -63,3 +63,32 @@
     });
   });
 })();
+
+// Copy heading anchor link to clipboard on click
+(function () {
+  function ready(fn) {
+    if (document.readyState !== 'loading') fn();
+    else document.addEventListener('DOMContentLoaded', fn);
+  }
+
+  ready(function () {
+    document.querySelectorAll('a.anchor-heading').forEach(function (anchor) {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        var hash = anchor.getAttribute('href');
+        history.pushState(null, '', hash);
+        var url = window.location.href;
+        navigator.clipboard.writeText(url).then(function () {
+          var tooltip = document.createElement('span');
+          tooltip.textContent = 'Link copied!';
+          tooltip.style.cssText = 'position:fixed;bottom:1.5rem;right:1.5rem;background:#333;color:#fff;padding:0.4rem 0.8rem;border-radius:4px;font-size:0.8rem;z-index:9999;opacity:1;transition:opacity 0.4s ease;';
+          document.body.appendChild(tooltip);
+          setTimeout(function () {
+            tooltip.style.opacity = '0';
+            setTimeout(function () { tooltip.remove(); }, 400);
+          }, 1500);
+        });
+      });
+    });
+  });
+})();

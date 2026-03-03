@@ -10,7 +10,7 @@ permalink: /proxmox-homelab/inspiron-server/proxmox-test/
 ## Setting up Proxmox VE on a Dell Inspiron
 
 <div style="text-align:center; margin: 0.5rem 0 1.25rem;">
-    <img alt="Proxmox Logo" src="{{ '/assets/images/proxmox logo.png' | relative_url | replace: ' ', '%20' }}" style="max-width: 420px; width: 60%; height: auto;" />
+    <img alt="Proxmox Logo" src="{{ '/assets/images/proxmox/proxmox logo.png' | relative_url | replace: ' ', '%20' }}" style="max-width: 420px; width: 60%; height: auto;" />
     <div class="text-small" style="color: var(--color-fg-muted);">Dell Inspiron • Proxmox VE Bare‑Metal Install</div>
 </div>
 
@@ -27,7 +27,7 @@ This guide walks through how I installed and configured Proxmox VE on a Dell Ins
 
 Right after booting from the Proxmox VE installer USB, you’ll see the startup/installer menu:
 
-![Proxmox Installer Menu]({{ '/assets/images/proxmox startup.png' | relative_url | replace: ' ', '%20' }})
+![Proxmox Installer Menu]({{ '/assets/images/proxmox/proxmox startup.png' | relative_url | replace: ' ', '%20' }})
 
 I downloaded the latest Proxmox VE ISO and flashed it to a USB drive, booted the Dell Inspiron, and installed Proxmox to the internal disk. During setup I selected a small system disk size (~100 GB) for the Proxmox root volume.
 
@@ -39,11 +39,11 @@ Proxmox didn’t recognize my LAN interface automatically, so I manually configu
 
 Example output:
 
-![ip a output]({{ '/assets/images/ip a  proxmox.jpg' | relative_url | replace: ' ', '%20' }})
+![ip a output]({{ '/assets/images/proxmox/ip a  proxmox.jpg' | relative_url | replace: ' ', '%20' }})
 
 Then edit the interfaces file:
 
-![interfaces file]({{ '/assets/images/proxmox networking.jpg' | relative_url | replace: ' ', '%20' }})
+![interfaces file]({{ '/assets/images/proxmox/proxmox networking.jpg' | relative_url | replace: ' ', '%20' }})
 
 Example config:
 ```ini
@@ -72,7 +72,7 @@ https://192.168.12.130:8006
 
 Once the node comes online, the Proxmox Summary page shows system resources and the repo status warning (normal without a subscription):
 
-![Proxmox Summary Page]({{ '/assets/images/proxmox specs.png' | relative_url | replace: ' ', '%20' }})
+![Proxmox Summary Page]({{ '/assets/images/proxmox/proxmox specs.png' | relative_url | replace: ' ', '%20' }})
 
 ### 4) Post-Install Tweaks
 - Switch to no-subscription repo (optional)

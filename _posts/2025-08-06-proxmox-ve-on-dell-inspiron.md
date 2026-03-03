@@ -8,7 +8,7 @@ description: "Bare‑metal Proxmox VE install on a Dell Inspiron for a compact h
 ---
 
 <div style="text-align:center; margin: 0.5rem 0 1.25rem;">
-    <img alt="Proxmox Logo" src="{{ '/assets/images/proxmox logo.png' | relative_url | replace: ' ', '%20' }}" style="max-width: 420px; width: 60%; height: auto;" />
+    <img alt="Proxmox Logo" src="{{ '/assets/images/proxmox/proxmox logo.png' | relative_url | replace: ' ', '%20' }}" style="max-width: 420px; width: 60%; height: auto;" />
     <div class="text-small" style="color: var(--color-fg-muted);">Dell Inspiron • Proxmox VE Bare‑Metal Install</div>
 </div>
 
@@ -26,7 +26,7 @@ This guide walks through how I installed and configured Proxmox VE on a Dell Ins
 
 Right after booting from the Proxmox VE installer USB, you’ll see the startup/installer menu. Place this near the beginning of your read:
 
-![Proxmox Installer Menu]({{ '/assets/images/proxmox startup.png' | relative_url | replace: ' ', '%20' }})
+![Proxmox Installer Menu]({{ '/assets/images/proxmox/proxmox startup.png' | relative_url | replace: ' ', '%20' }})
 
 I downloaded the latest Proxmox VE ISO and flashed it to a USB drive, booted the Dell Inspiron, and installed Proxmox to the internal disk. During setup I selected a small system disk size (~100 GB) for the Proxmox root volume.
 
@@ -44,11 +44,11 @@ Proxmox didn’t recognize my LAN Ethernet interface automatically, so before I 
 
 First, I ran `ip a` to identify my NIC and current interface state:
 
-![ip a output]({{ '/assets/images/ip a  proxmox.jpg' | relative_url | replace: ' ', '%20' }})
+![ip a output]({{ '/assets/images/proxmox/ip a  proxmox.jpg' | relative_url | replace: ' ', '%20' }})
 
 Then I edited `/etc/network/interfaces` to set up the correct bridge and static IP for management:
 
-![interfaces file]({{ '/assets/images/proxmox networking.jpg' | relative_url | replace: ' ', '%20' }})
+![interfaces file]({{ '/assets/images/proxmox/proxmox networking.jpg' | relative_url | replace: ' ', '%20' }})
 
 For reference, here’s the config in text form so you can copy/paste:
 
@@ -94,7 +94,7 @@ https://192.168.12.130:8006
 
 Once the node came online, the Proxmox Summary page showed system resources and the repo status warning (normal without a subscription):
 
-![Proxmox Summary Page]({{ '/assets/images/proxmox specs.png' | relative_url | replace: ' ', '%20' }})
+![Proxmox Summary Page]({{ '/assets/images/proxmox/proxmox specs.png' | relative_url | replace: ' ', '%20' }})
 
 ## 5) Post-Install QOL Tweaks
 

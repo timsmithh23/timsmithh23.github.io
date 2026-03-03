@@ -13,4 +13,8 @@ LoNSeMonSy stood out because it blends networking, security, DevOps, infrastruct
 
 Below is the presentation I pitched to the class (thank you Google Slides for creating the visuals!!)
 
-<iframe src="{{ '/assets/images/LoNSeMonSy.pdf' | relative_url }}" width="100%" height="900px" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
+<iframe src="{{ '/assets/images/capstone/LoNSeMonSy.pdf' | relative_url }}" width="100%" height="900px" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
+
+<p style="text-align: center; margin-top: 1rem;">
+  <a href="{{ '/assets/images/capstone/LoNSeMonSy.pdf' | relative_url }}" target="_blank" style="display: inline-block; padding: 0.5rem 1.2rem; background-color: #0d6efd; color: white; border-radius: 6px; text-decoration: none; font-weight: bold;">📄 Can't see the slides? Open them here</a>
+</p>

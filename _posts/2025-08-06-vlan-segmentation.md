@@ -14,7 +14,7 @@ published: false
 
 In this project, I segmented my homelab network using VLANs to improve security and organization. I set up inter-VLAN routing so that devices on different VLANs could communicate when needed, while keeping traffic isolated.
 
-![Networking Topology](assets/images/netdiagram.png)
+![Networking Topology](assets/images/homelab/netdiagram.png)
 
 ## Objective
 
