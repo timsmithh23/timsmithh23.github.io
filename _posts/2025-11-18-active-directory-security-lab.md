@@ -9,7 +9,7 @@ nav_order: 2
 
 # Active Directory Security Lab: Splunk Monitoring and Simulated Attacks
 
-This homelab focuses on setting up an **Active Directory environment** integrated with **Splunk** for logging and monitoring, utilizing various operating systems to introduce me into the world of **Cybersecurity**. This also includes me setting up a simulation of a **Kali Linux "attack"** via RedTeam and **Hydra** to brute force into a test Windows 11 account.
+This homelab focuses on setting up an Active Directory environment integrated with Splunk for logging and monitoring, utilizing various operating systems to introduce me into the world of Cybersecurity. This also includes me setting up a simulation of a Kali Linux "attack" via RedTeam and Hydra to brute force into a test Windows 11 account.
 
 I'll be using **Oracle VirtualBox** on my personal Windows 11 machine to host and simulate this LAN because I had difficulties trying to do this on my Optiplex and Inspiron server.
 
@@ -278,7 +278,8 @@ Although this is something optional and something that has a lot more in-depth c
 
 Atomic Red Team, simply put, is a library of tests mapped to the MITRE ATT&CK framework that allows security teams to test their defenses against known adversary techniques. It provides small and highly portable detection tests based on MITRE's ATT&CK.
 
-**Note to everyone (any myself)**: Always run these tests in a controlled lab environment only. These are actual attack techniques and should never be run on production systems.
+{: .warning }
+Always run these tests in a controlled lab environment only. These are actual attack techniques and should never be run on production systems.
 
 ### Installing Atomic Red Team
 

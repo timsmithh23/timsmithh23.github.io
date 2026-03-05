@@ -6,7 +6,7 @@ nav_order: 1
 
 # Welcome!
 
-Hi, I'm a senior IT student passionate about networking, security, and building labs. This is where I document what I'm working on and what I learn along the way.
+Hi, I'm an IT student passionate about networking, security, and building labs. This is where I document what I'm working on and what I learn along the way.
 
 
 ## Current Update: ##

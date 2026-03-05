@@ -21,7 +21,8 @@ This guide walks through how I installed and configured Proxmox VE on a Dell Ins
 - **Storage:** 100 GB allocated to Proxmox system disk; rest for VM disks (local-lvm)
 - **Network:** One Ethernet interface, bridged in Proxmox for LAN/trunking
 
-> Note: I only allocated 100 GB to the Proxmox root disk during install. You can grow storage later by adding a disk or creating new LVM/thin pools.
+{: .note }
+I only allocated 100 GB to the Proxmox root disk during install. You can grow storage later by adding a disk or creating new LVM/thin pools.
 
 ### 1) Proxmox Startup and Install
 
@@ -44,6 +45,7 @@ Example output:
 Then edit the interfaces file:
 
 ![interfaces file]({{ '/assets/images/proxmox/proxmox networking.jpg' | relative_url | replace: ' ', '%20' }})
+*Network interface blurred.*
 
 Example config:
 ```ini
@@ -82,4 +84,4 @@ Once the node comes online, the Proxmox Summary page shows system resources and 
 ### What’s Next
 - Create VLAN-tagged networks for lab isolation
 - Spin up pfSense as a router/firewall VM
-- Deploy containers (LXC) or VMs for apps like Nextcloud, monitoring, or dev tools
+- Deploy VMs for apps like Nextcloud, monitoring, or dev tools
