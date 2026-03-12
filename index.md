@@ -11,7 +11,7 @@ Hi, I'm an IT student passionate about networking, security, and building labs. 
 
 ## Current Update: ##
 
-I’m planning to take the CCNA in April 2026. Because of that, I’m putting my homelabs on hold for now while I focus on studying, schoolwork, and a new capstone project. I’ll be documenting my progress over the next two semesters as my group and I design and build it. I think it’ll cover a lot of the areas I’m interested in, like network automation, security, load-balancing, AI APIs, open source system designs, and solving real problems as a team.
+I’m planning to take the CCNA in April 2026. Because of that, I’m putting my homelabs on hold for now while I focus on studying, schoolwork, and a new capstone project. I’ll be documenting my progress over the next two semesters as my group and I design and build it. I think it’ll cover a lot of the areas I’m interested in, like network automation, security, load-balancing, local AI LLMs, open source system designs, and solving real problems as a team.
 
 ---
 
