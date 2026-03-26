@@ -1,12 +1,12 @@
 ---
-title: "Getting Started with Network Automation: Cisco Switch Monitoring with Netmiko"
+title: "Pulling Cisco Configs with Netmiko Automation Library"
 layout: default
 date: 2026-03-02
 published: true
 nav_exclude: true
 ---
 
-# Getting Started with Network Automation: Cisco Switch Monitoring with Netmiko
+# Pulling Cisco Configs with Netmiko Automation Library
 
 ![Python and Netmiko]({{ '/assets/images/cisco-monitoring/netmiko.png' | relative_url }})
 
