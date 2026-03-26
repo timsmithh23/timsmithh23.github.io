@@ -7,7 +7,7 @@ nav_order: 2
 
 # Remote Network Topology
 
-![LoNSeMonSy Network Topology]({{ '/assets/images/capstone/LonseMonsy Network Topology.png' | relative_url | replace: ' ', '%20' }})
+![LoNSeMonSy Network Topology](/assets/images/capstone/lonsemonsy-network-topology.png)
 
 ## Remote Access
 
